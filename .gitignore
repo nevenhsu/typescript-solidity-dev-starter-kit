@@ -1,7 +1,16 @@
-node_modules/
-cache/
-build/
-typechain/
-artifacts/
-coverage*
+# dependencies
+/node_modules
+
+# production
+/cache
+/build
+/typechain
+/artifacts
+/dist
+
+# testing
+/coverage
+
+# misc
+.DS_Store
 .env

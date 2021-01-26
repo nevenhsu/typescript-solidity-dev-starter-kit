@@ -29,7 +29,7 @@ Notes:
 
 ### Run Contract Tests and Generate Gas Usage Report
 
-In one terminal run `npx buidler node`
+In one terminal run `npx hardhat node`
 
 Then in another run `npm run test -- --network localhost`
 
@@ -55,8 +55,8 @@ Create/modify network config in `hardhat.config.ts` and add API key and private 
 
 ### Verify on Etherscan
 
-Add Etherscan API key to `hardhat.config.ts`, then run:
+Using the [hardhat-etherscan plugin](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html), add Etherscan API key to `hardhat.config.ts`, then run:
 
-`npx hardhat verify-contract --contract-name Counter --address <DEPLOYED ADDRESS>`
+`npx hardhat verify --network rinkeby <DEPLOYED ADDRESS>`
 
 PRs and feedback welcome!
