@@ -1,7 +1,7 @@
 require('tsconfig-paths/register')
 
-import { ethers } from 'hardhat'
 import chai from 'chai'
+import { ethers } from 'hardhat'
 import { solidity } from 'ethereum-waffle'
 import { Counter__factory, Counter } from '../typechain'
 

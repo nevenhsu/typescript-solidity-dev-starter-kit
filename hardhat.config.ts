@@ -2,12 +2,14 @@ require('dotenv').config()
 
 import { HardhatUserConfig } from 'hardhat/types'
 
-import '@nomiclabs/hardhat-waffle'
 import 'hardhat-typechain'
+import '@nomiclabs/hardhat-waffle'
+import '@nomiclabs/hardhat-ethers'
 import '@nomiclabs/hardhat-etherscan'
 import 'hardhat-gas-reporter'
 // import "solidity-coverage";
 
+const CHAIN_ID = Number(process.env.CHAIN_ID) || undefined
 const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY || ''
 const BLOCK_NUMBER = Number(process.env.BLOCK_NUMBER) || undefined
 const INFURA_API_KEY = process.env.INFURA_API_KEY || ''
@@ -23,6 +25,7 @@ const config: HardhatUserConfig = {
   },
   networks: {
     hardhat: {
+      chainId: CHAIN_ID,
       forking: {
         url: ALCHEMY_API_KEY,
         blockNumber: BLOCK_NUMBER,
